@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  padding: 5px 0;
+  background-color: #00cafc7c;
+}
+
+h1 {
+  color: #ff6f61;
+  font-family: 'Arial', sans-serif;
+  font-size: 2rem;
+  margin: 0;
+}
+
+p {
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  margin: 0;
+}
