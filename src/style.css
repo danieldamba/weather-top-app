@@ -9,13 +9,15 @@ body {
   justify-content: center;
   gap: 100px;
   padding: 5px 0;
-  background-color: #00cafc7c;
+  background-color: #60dfff;
+  position: sticky;
+  top: 0;
 }
 
 h1 {
-  color: #ff6f61;
+  color: #9b1307;
   font-family: 'Arial', sans-serif;
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin: 0;
 }
 
@@ -24,4 +26,206 @@ p {
   font-family: 'Arial', sans-serif;
   font-size: 1rem;
   margin: 0;
+}
+
+#main-container {
+  min-height: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+  gap: 10px;
+  justify-content: center;
+}
+
+.forecast-container {
+  border: 1px solid skyblue;
+  padding: 10px;
+  height: fit-content;
+  width: 500px;
+  border-radius: 10px;
+  display: grid;
+  grid-template: 200px min-content / 1fr 1fr;
+}
+
+.location-container {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.hour-container {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.hour-data {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.icon-one {
+  width: 150px;
+  height: 150px;
+  align-self: center;
+}
+
+/* hours styles  */
+
+
+.hourly-container,.daily-container {
+  margin: 10px;
+  display: flex;
+  flex-flow: column;
+}
+
+.next-hours, .daily-forecasts {
+  display: flex;
+  gap: 10px;
+}
+
+
+footer {
+  text-align: center;
+  padding: 90px 10px;
+  background-color: #00cafc7c;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+}
+
+.loc-name-1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  text-transform: capitalize;
+}
+
+.loc-name-2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.request-hour {
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: 'Arial', sans-serif;
+}
+
+.hour-temp-main {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+}
+
+.hour-cond-main {
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-family: 'Arial', sans-serif;
+  font-style: italic;
+}
+
+.hour-forecast {
+  display: grid;
+  grid-template: 2fr repeat(3, 1fr) / 1fr;
+  padding: 10px;
+  border: 1px solid #00cafc7c;
+  border-radius: 10px;
+  background-color: #ffffff;
+  width: 120px;
+  height: 200px;
+}
+
+.hourly-icon, .day-icon {
+  width: 80px;
+  height: 80px;
+}
+
+.day-forecast {
+  padding: 10px;
+  border: 1px solid #00cafc7c;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.hour-time, .day-date {
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.hour-temp, .day-temp {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.hour-cond, .day-cond {
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: justify;
+}
+
+.daily-title, .hourly-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10px 0;
+  text-align: center;
+}
+
+
+button[type] {
+  font-size: 1.25rem;
+  text-transform: capitalize;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: #fff;
+  background-color: #004aaa;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+}
+
+input[type] {
+  font-size: 1.25rem;
+  text-transform: capitalize;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #004aaa;
+  padding: 10px 20px;
+  border-radius: 15px;
+}
+
+input[type]:focus {
+  outline: none;
+  border-color: #004aaa;
+  box-shadow: 0 0 5px #004aaa;
+}
+
+button[type]:hover {
+  background-color: #003377;
+  cursor: pointer;
+}
+
+#ctoF-btn {
+  font-size: 1.25rem;
+  padding: 10px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  background-color: #9b1307;
+  color: #f3efef;
+  font-weight: 800;
+}
+
+.seek {
+  display: none;
 }
