@@ -17,11 +17,28 @@ async function getLocalForecast(location) {
 const form = document.querySelector(`form`);
 form.addEventListener(`submit`, async (e) => {
   e.preventDefault();
+  
   let data = document.querySelector(`#location-name`).value;
+  waitinForLoad();
   let dataW = await getLocalForecast(data);
-
   renderData([dataW]);
 });
+
+function waitinForLoad() {
+  const mainContainer = document.querySelector(`#main-container`);
+  mainContainer.innerHTML = ``;
+
+  const loading = document.createElement(`p`);
+  loading.textContent = `LOADING....`;
+  loading.classList.add(`load-text`);
+
+  const desc = document.createElement(`p`);
+  desc.textContent = `Please wait while we fetch your forecast.`;
+  desc.classList.add(`load-text`);
+
+  mainContainer.appendChild(loading);
+  mainContainer.appendChild(desc);
+}
 
 function setData(data) {
   MY_FORECAST = data;
